@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me Profile card || Learning Robo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"> <!-- Linking to external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  </head>
+  <body class="profile-body"> <!-- Added body class -->
+    
+    <div class = "about-wrapper">
+      <div class = "about-left">
+        <div class = "about-left-content">
+          <div>
+            <div class = "shadow">
+              <div class = "about-img">
+                <img src = "my photo.jpg" alt = "about image">
+              </div>
+            </div>
+
+            <h2>Mu'min Awwad</h2>
+            <h3>Web developer</h3>
+          </div>
+
+          <ul class="icons">
+            <li>
+                <a href="https://www.facebook.com/theycallmegeekps/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/theycallmegeek0" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mu-min-awwad-a94b94198/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/geekps18/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+        
+        </div>
+        
+      </div>
+
+      <div class = "about-right">
+        <h1>Hello<span>!</span></h1>
+        <h2>Here's who I am & what I do</h2>
+
+        <div class = "about">
+          <p>My Name is Mu'min, a 21 ys old CAP Student. I always dreamt of being a web developer, and everything is gonna be real someday.</p><br>
+          <p>Wanna check out about my personal hobbies? Great idea!</p><br>
+        </div>
+        
+        <div class="hobby-container">
+          <div class="hobby">
+              <img src="photography.jpg" alt="Hobby 1"><br>
+              <a src="https://en.wikipedia.org/wiki/Photography">Photography.</a>
+              <p>Capturing beautiful moments and sceneries through the lens of my camera.</p>
+          </div>
+          <div class="hobby">
+              <img src="hiking.jpg" alt="Hobby 2">
+              <h4>Hiking.</h4>
+              <p>Exploring mountains and trails, enjoying the beauty of nature.</p>
+          </div>
+          <div class="hobby">
+              <img src="monalisa.jpg" alt="Hobby 3">
+              <h3>Painting</h3>
+              <p>Expressing creativity and emotions through colors and brushes.</p>
+          </div>
+        </div>
+        
+        <!-- Form for guessing favorite hobby -->
+        <div class="form-container">
+          <h3>Can you guess my favorite hobby?</h3>
+          <form id="hobbyForm">
+              <input type="text" id="hobbyGuess" name="hobbyGuess" placeholder="Your guess..." required>
+              <button type="submit">Submit</button>
+          </form>
+          <p id="responseMessage"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('hobbyForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const guess = document.getElementById('hobbyGuess').value.toLowerCase();
+        const favoriteHobby = 'photography'; // Set your favorite hobby here
+
+        if (guess === favoriteHobby) {
+          document.getElementById('responseMessage').textContent = 'Correct! My favorite hobby is ' + favoriteHobby + '.';
+          document.getElementById('responseMessage').style.color = 'green';
+        } else {
+          document.getElementById('responseMessage').textContent = 'Sorry, that’s not correct. Try again!';
+          document.getElementById('responseMessage').style.color = 'red';
+        }
+      });
+    </script>
+
+  </body>
+</html>
